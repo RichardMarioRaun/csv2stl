@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_yeppie_FILE C:/iCloudDrive/Documents/Programeerimine/Programeerimine C++/win/yeppie/cmake-build-debug/plugins/imageformats/yeppie.exe)
+set(__QT_DEPLOY_TARGET_yeppie_RUNTIME_DLLS C:/Qt/6.7.0/mingw_64/bin/Qt6MultimediaWidgets.dll;C:/Qt/6.7.0/mingw_64/bin/Qt6Widgets.dll;C:/Qt/6.7.0/mingw_64/bin/Qt6Multimedia.dll;C:/Qt/6.7.0/mingw_64/bin/Qt6Gui.dll;C:/Qt/6.7.0/mingw_64/bin/Qt6Network.dll;C:/Qt/6.7.0/mingw_64/bin/Qt6Core.dll)

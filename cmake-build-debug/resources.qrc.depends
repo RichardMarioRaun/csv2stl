@@ -1,0 +1,9 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource>
+        <file>images/duck_loading.gif</file>
+        <file>images/car_loading.gif</file>
+        <file>images/weridLoading.gif</file>
+        <file>images/green_check.png</file>
+        <file>images/loadingDuck.mp4</file>
+    </qresource>
+</RCC>

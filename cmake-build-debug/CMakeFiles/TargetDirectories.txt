@@ -1,0 +1,4 @@
+C:/iCloudDrive/Documents/Programeerimine/Programeerimine C++/win/yeppie/cmake-build-debug/CMakeFiles/yeppie.dir
+C:/iCloudDrive/Documents/Programeerimine/Programeerimine C++/win/yeppie/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/iCloudDrive/Documents/Programeerimine/Programeerimine C++/win/yeppie/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/iCloudDrive/Documents/Programeerimine/Programeerimine C++/win/yeppie/cmake-build-debug/CMakeFiles/yeppie_autogen.dir
