@@ -7,6 +7,12 @@ set(CMAKE_DEPENDS_GENERATOR "MinGW Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "C:/Dokumendid/Github/csv2stl/CMakeLists.txt"
+  "CMakeFiles/3.27.8/CMakeCCompiler.cmake"
+  "CMakeFiles/3.27.8/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.27.8/CMakeRCCompiler.cmake"
+  "CMakeFiles/3.27.8/CMakeSystem.cmake"
+  "C:/Dokumendid/Github/csv2stl/resources.qrc"
   "C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6/FindWrapAtomic.cmake"
   "C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake"
   "C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6/Qt6Config.cmake"
@@ -252,12 +258,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Users/Ricky/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake"
   "C:/Users/Ricky/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake"
   "C:/Users/Ricky/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/ProcessorCount.cmake"
-  "C:/iCloudDrive/Documents/Programeerimine/Programeerimine C++/win/yeppie/CMakeLists.txt"
-  "CMakeFiles/3.27.8/CMakeCCompiler.cmake"
-  "CMakeFiles/3.27.8/CMakeCXXCompiler.cmake"
-  "CMakeFiles/3.27.8/CMakeRCCompiler.cmake"
-  "CMakeFiles/3.27.8/CMakeSystem.cmake"
-  "C:/iCloudDrive/Documents/Programeerimine/Programeerimine C++/win/yeppie/resources.qrc"
   )
 
 # The corresponding makefile is:
@@ -269,7 +269,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "resources.qrc.depends"
-  "CMakeFiles/yeppie_autogen.dir/AutogenInfo.json"
+  "CMakeFiles/csv2stl_autogen.dir/AutogenInfo.json"
   ".qt/QtDeploySupport.cmake"
   ".qt/QtDeployTargets.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -277,6 +277,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/yeppie.dir/DependInfo.cmake"
-  "CMakeFiles/yeppie_autogen.dir/DependInfo.cmake"
+  "CMakeFiles/csv2stl.dir/DependInfo.cmake"
+  "CMakeFiles/csv2stl_autogen.dir/DependInfo.cmake"
   )

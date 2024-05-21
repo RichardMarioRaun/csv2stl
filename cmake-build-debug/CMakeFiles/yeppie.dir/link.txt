@@ -1,3 +1,0 @@
-C:\Users\Ricky\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E rm -f CMakeFiles\yeppie.dir/objects.a
-C:\Qt\Tools\mingw1120_64\bin\ar.exe qc CMakeFiles\yeppie.dir/objects.a @CMakeFiles\yeppie.dir\objects1.rsp
-C:\Qt\Tools\mingw1120_64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\yeppie.dir/objects.a -Wl,--no-whole-archive -o plugins\imageformats\yeppie.exe -Wl,--out-implib,libyeppie.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\yeppie.dir\linkLibs.rsp

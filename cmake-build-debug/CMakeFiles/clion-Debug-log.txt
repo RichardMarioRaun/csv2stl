@@ -1,4 +1,4 @@
-C:\Users\Ricky\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -DCMAKE_C_COMPILER=C:/Qt/Tools/mingw1120_64/bin/gcc.exe -DCMAKE_CXX_COMPILER=C:/Qt/Tools/mingw1120_64/bin/g++.exe -G "CodeBlocks - MinGW Makefiles" -S "C:\iCloudDrive\Documents\Programeerimine\Programeerimine C++\win\yeppie" -B "C:\iCloudDrive\Documents\Programeerimine\Programeerimine C++\win\yeppie\cmake-build-debug"
+C:\Users\Ricky\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -DCMAKE_C_COMPILER=C:/Qt/Tools/mingw1120_64/bin/gcc.exe -DCMAKE_CXX_COMPILER=C:/Qt/Tools/mingw1120_64/bin/g++.exe -G "CodeBlocks - MinGW Makefiles" -S C:\Dokumendid\Github\csv2stl -B C:\Dokumendid\Github\csv2stl\cmake-build-debug
 CMake Deprecation Warning:
   Support for "Extra Generators" like
 
@@ -8,7 +8,13 @@ CMake Deprecation Warning:
   use the cmake-file-api(7) to view CMake-generated project build trees.
 
 
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Performing Test HAVE_STDATOMIC
+-- Performing Test HAVE_STDATOMIC - Success
+-- Found WrapAtomic: TRUE  
 -- Could NOT find WrapVulkanHeaders (missing: Vulkan_INCLUDE_DIR) 
--- Configuring done (0.3s)
+-- Configuring done (2.4s)
 -- Generating done (0.0s)
--- Build files have been written to: C:/iCloudDrive/Documents/Programeerimine/Programeerimine C++/win/yeppie/cmake-build-debug
+-- Build files have been written to: C:/Dokumendid/Github/csv2stl/cmake-build-debug

@@ -56,10 +56,10 @@ RM = C:\Users\Ricky\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\iCloudDrive\Documents\Programeerimine\Programeerimine C++\win\yeppie"
+CMAKE_SOURCE_DIR = C:\Dokumendid\Github\csv2stl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\iCloudDrive\Documents\Programeerimine\Programeerimine C++\win\yeppie\cmake-build-debug"
+CMAKE_BINARY_DIR = C:\Dokumendid\Github\csv2stl\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\iCloudDrive\Documents\Programeerimine\Programeerimine C++\win\yeppie\cmake-build-debug\CMakeFiles" "C:\iCloudDrive\Documents\Programeerimine\Programeerimine C++\win\yeppie\cmake-build-debug\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Dokumendid\Github\csv2stl\cmake-build-debug\CMakeFiles C:\Dokumendid\Github\csv2stl\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\iCloudDrive\Documents\Programeerimine\Programeerimine C++\win\yeppie\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Dokumendid\Github\csv2stl\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -116,37 +116,37 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named yeppie
+# Target rules for targets named csv2stl
 
 # Build rule for target.
-yeppie: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 yeppie
-.PHONY : yeppie
+csv2stl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 csv2stl
+.PHONY : csv2stl
 
 # fast build rule for target.
-yeppie/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\yeppie.dir\build.make CMakeFiles/yeppie.dir/build
-.PHONY : yeppie/fast
+csv2stl/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\csv2stl.dir\build.make CMakeFiles/csv2stl.dir/build
+.PHONY : csv2stl/fast
 
 #=============================================================================
-# Target rules for targets named yeppie_autogen
+# Target rules for targets named csv2stl_autogen
 
 # Build rule for target.
-yeppie_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 yeppie_autogen
-.PHONY : yeppie_autogen
+csv2stl_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 csv2stl_autogen
+.PHONY : csv2stl_autogen
 
 # fast build rule for target.
-yeppie_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\yeppie_autogen.dir\build.make CMakeFiles/yeppie_autogen.dir/build
-.PHONY : yeppie_autogen/fast
+csv2stl_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\csv2stl_autogen.dir\build.make CMakeFiles/csv2stl_autogen.dir/build
+.PHONY : csv2stl_autogen/fast
 
 MainCPPport.obj: MainCPPport.cpp.obj
 .PHONY : MainCPPport.obj
 
 # target to build an object file
 MainCPPport.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\yeppie.dir\build.make CMakeFiles/yeppie.dir/MainCPPport.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\csv2stl.dir\build.make CMakeFiles/csv2stl.dir/MainCPPport.cpp.obj
 .PHONY : MainCPPport.cpp.obj
 
 MainCPPport.i: MainCPPport.cpp.i
@@ -154,7 +154,7 @@ MainCPPport.i: MainCPPport.cpp.i
 
 # target to preprocess a source file
 MainCPPport.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\yeppie.dir\build.make CMakeFiles/yeppie.dir/MainCPPport.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\csv2stl.dir\build.make CMakeFiles/csv2stl.dir/MainCPPport.cpp.i
 .PHONY : MainCPPport.cpp.i
 
 MainCPPport.s: MainCPPport.cpp.s
@@ -162,7 +162,7 @@ MainCPPport.s: MainCPPport.cpp.s
 
 # target to generate assembly for a file
 MainCPPport.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\yeppie.dir\build.make CMakeFiles/yeppie.dir/MainCPPport.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\csv2stl.dir\build.make CMakeFiles/csv2stl.dir/MainCPPport.cpp.s
 .PHONY : MainCPPport.cpp.s
 
 MainPortThread.obj: MainPortThread.cpp.obj
@@ -170,7 +170,7 @@ MainPortThread.obj: MainPortThread.cpp.obj
 
 # target to build an object file
 MainPortThread.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\yeppie.dir\build.make CMakeFiles/yeppie.dir/MainPortThread.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\csv2stl.dir\build.make CMakeFiles/csv2stl.dir/MainPortThread.cpp.obj
 .PHONY : MainPortThread.cpp.obj
 
 MainPortThread.i: MainPortThread.cpp.i
@@ -178,7 +178,7 @@ MainPortThread.i: MainPortThread.cpp.i
 
 # target to preprocess a source file
 MainPortThread.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\yeppie.dir\build.make CMakeFiles/yeppie.dir/MainPortThread.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\csv2stl.dir\build.make CMakeFiles/csv2stl.dir/MainPortThread.cpp.i
 .PHONY : MainPortThread.cpp.i
 
 MainPortThread.s: MainPortThread.cpp.s
@@ -186,15 +186,39 @@ MainPortThread.s: MainPortThread.cpp.s
 
 # target to generate assembly for a file
 MainPortThread.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\yeppie.dir\build.make CMakeFiles/yeppie.dir/MainPortThread.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\csv2stl.dir\build.make CMakeFiles/csv2stl.dir/MainPortThread.cpp.s
 .PHONY : MainPortThread.cpp.s
+
+csv2stl_autogen/mocs_compilation.obj: csv2stl_autogen/mocs_compilation.cpp.obj
+.PHONY : csv2stl_autogen/mocs_compilation.obj
+
+# target to build an object file
+csv2stl_autogen/mocs_compilation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\csv2stl.dir\build.make CMakeFiles/csv2stl.dir/csv2stl_autogen/mocs_compilation.cpp.obj
+.PHONY : csv2stl_autogen/mocs_compilation.cpp.obj
+
+csv2stl_autogen/mocs_compilation.i: csv2stl_autogen/mocs_compilation.cpp.i
+.PHONY : csv2stl_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+csv2stl_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\csv2stl.dir\build.make CMakeFiles/csv2stl.dir/csv2stl_autogen/mocs_compilation.cpp.i
+.PHONY : csv2stl_autogen/mocs_compilation.cpp.i
+
+csv2stl_autogen/mocs_compilation.s: csv2stl_autogen/mocs_compilation.cpp.s
+.PHONY : csv2stl_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+csv2stl_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\csv2stl.dir\build.make CMakeFiles/csv2stl.dir/csv2stl_autogen/mocs_compilation.cpp.s
+.PHONY : csv2stl_autogen/mocs_compilation.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\yeppie.dir\build.make CMakeFiles/yeppie.dir/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\csv2stl.dir\build.make CMakeFiles/csv2stl.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -202,7 +226,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\yeppie.dir\build.make CMakeFiles/yeppie.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\csv2stl.dir\build.make CMakeFiles/csv2stl.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -210,7 +234,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\yeppie.dir\build.make CMakeFiles/yeppie.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\csv2stl.dir\build.make CMakeFiles/csv2stl.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 mainwindow.obj: mainwindow.cpp.obj
@@ -218,7 +242,7 @@ mainwindow.obj: mainwindow.cpp.obj
 
 # target to build an object file
 mainwindow.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\yeppie.dir\build.make CMakeFiles/yeppie.dir/mainwindow.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\csv2stl.dir\build.make CMakeFiles/csv2stl.dir/mainwindow.cpp.obj
 .PHONY : mainwindow.cpp.obj
 
 mainwindow.i: mainwindow.cpp.i
@@ -226,7 +250,7 @@ mainwindow.i: mainwindow.cpp.i
 
 # target to preprocess a source file
 mainwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\yeppie.dir\build.make CMakeFiles/yeppie.dir/mainwindow.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\csv2stl.dir\build.make CMakeFiles/csv2stl.dir/mainwindow.cpp.i
 .PHONY : mainwindow.cpp.i
 
 mainwindow.s: mainwindow.cpp.s
@@ -234,7 +258,7 @@ mainwindow.s: mainwindow.cpp.s
 
 # target to generate assembly for a file
 mainwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\yeppie.dir\build.make CMakeFiles/yeppie.dir/mainwindow.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\csv2stl.dir\build.make CMakeFiles/csv2stl.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
 qrc_resources.obj: qrc_resources.cpp.obj
@@ -242,7 +266,7 @@ qrc_resources.obj: qrc_resources.cpp.obj
 
 # target to build an object file
 qrc_resources.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\yeppie.dir\build.make CMakeFiles/yeppie.dir/qrc_resources.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\csv2stl.dir\build.make CMakeFiles/csv2stl.dir/qrc_resources.cpp.obj
 .PHONY : qrc_resources.cpp.obj
 
 qrc_resources.i: qrc_resources.cpp.i
@@ -250,7 +274,7 @@ qrc_resources.i: qrc_resources.cpp.i
 
 # target to preprocess a source file
 qrc_resources.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\yeppie.dir\build.make CMakeFiles/yeppie.dir/qrc_resources.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\csv2stl.dir\build.make CMakeFiles/csv2stl.dir/qrc_resources.cpp.i
 .PHONY : qrc_resources.cpp.i
 
 qrc_resources.s: qrc_resources.cpp.s
@@ -258,32 +282,8 @@ qrc_resources.s: qrc_resources.cpp.s
 
 # target to generate assembly for a file
 qrc_resources.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\yeppie.dir\build.make CMakeFiles/yeppie.dir/qrc_resources.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\csv2stl.dir\build.make CMakeFiles/csv2stl.dir/qrc_resources.cpp.s
 .PHONY : qrc_resources.cpp.s
-
-yeppie_autogen/mocs_compilation.obj: yeppie_autogen/mocs_compilation.cpp.obj
-.PHONY : yeppie_autogen/mocs_compilation.obj
-
-# target to build an object file
-yeppie_autogen/mocs_compilation.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\yeppie.dir\build.make CMakeFiles/yeppie.dir/yeppie_autogen/mocs_compilation.cpp.obj
-.PHONY : yeppie_autogen/mocs_compilation.cpp.obj
-
-yeppie_autogen/mocs_compilation.i: yeppie_autogen/mocs_compilation.cpp.i
-.PHONY : yeppie_autogen/mocs_compilation.i
-
-# target to preprocess a source file
-yeppie_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\yeppie.dir\build.make CMakeFiles/yeppie.dir/yeppie_autogen/mocs_compilation.cpp.i
-.PHONY : yeppie_autogen/mocs_compilation.cpp.i
-
-yeppie_autogen/mocs_compilation.s: yeppie_autogen/mocs_compilation.cpp.s
-.PHONY : yeppie_autogen/mocs_compilation.s
-
-# target to generate assembly for a file
-yeppie_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\yeppie.dir\build.make CMakeFiles/yeppie.dir/yeppie_autogen/mocs_compilation.cpp.s
-.PHONY : yeppie_autogen/mocs_compilation.cpp.s
 
 # Help Target
 help:
@@ -293,14 +293,17 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... yeppie_autogen
-	@echo ... yeppie
+	@echo ... csv2stl_autogen
+	@echo ... csv2stl
 	@echo ... MainCPPport.obj
 	@echo ... MainCPPport.i
 	@echo ... MainCPPport.s
 	@echo ... MainPortThread.obj
 	@echo ... MainPortThread.i
 	@echo ... MainPortThread.s
+	@echo ... csv2stl_autogen/mocs_compilation.obj
+	@echo ... csv2stl_autogen/mocs_compilation.i
+	@echo ... csv2stl_autogen/mocs_compilation.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
@@ -310,9 +313,6 @@ help:
 	@echo ... qrc_resources.obj
 	@echo ... qrc_resources.i
 	@echo ... qrc_resources.s
-	@echo ... yeppie_autogen/mocs_compilation.obj
-	@echo ... yeppie_autogen/mocs_compilation.i
-	@echo ... yeppie_autogen/mocs_compilation.s
 .PHONY : help
 
 

@@ -18,6 +18,7 @@
 #include <QLibrary>
 
 
+
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent)
 {
@@ -112,16 +113,35 @@ void MainWindow::runMainPort() {
     showLoadingAnimation();
 
     auto *thread = new MainPortThread( getInputFilePath(), getOutputFileName(), getOutputDirPath(), std::stof(getFloatInput1()), std::stof(getFloatInput2()));
+
     connect(thread, &QThread::finished, this, [this, thread]() {
         loadingMovie->stop();
         loadingLabel->hide();
         thread->deleteLater();
+
+        QDialog *dialog = new QDialog(this);
+        dialog->setFixedSize(200, 100);
+
+        QVBoxLayout *layout = new QVBoxLayout(dialog);
+
+        QPushButton *closeButton = new QPushButton("Close Program", dialog);
+        QPushButton *resetButton = new QPushButton("Reset Program", dialog);
+
+        layout->addWidget(closeButton);
+        layout->addWidget(resetButton);
+
+        connect(closeButton, &QPushButton::clicked, this, &MainWindow::quit);
+        connect(resetButton, &QPushButton::clicked, this, &MainWindow::resetProgram);
+        connect(resetButton, &QPushButton::clicked, dialog, &QDialog::close);
+        resize(400, 400);
+
+        dialog->exec();
     });
 
 
     connect(thread, &QThread::finished, thread, &QObject::deleteLater);
 
-    connect(thread, &QThread::finished, qApp, &QCoreApplication::quit);// lopetab programmi kui thread labi saab
+    //connect(thread, &QThread::finished, qApp, &QCoreApplication::quit);// lopetab programmi kui thread labi saab
 
     thread->start();
 }
@@ -139,7 +159,7 @@ bool MainWindow::isFineOrNot(){
     return true;
 }
 
-void MainWindow::printInputsAndQuit() {
+void MainWindow::printInputs() {
 
     // Kas kasutaja sisestas kõik vajalikud väljad
     if (!isFineOrNot()){
@@ -161,8 +181,10 @@ void MainWindow::printInputsAndQuit() {
     std::cout << "Output Directory Path: " << getOutputDirPath() << std::endl;
     std::cout << "Grid Size: " << getFloatInput1() << std::endl;
     std::cout << "Bottom Thickness: " << getFloatInput2() << std::endl;
+    std::cout << std::endl;
+    std::cout << std::endl;
+    std::cout << std::endl;
 
-    //qApp->quit();
 }
 
 void MainWindow::onOkButtonClicked() {
@@ -186,30 +208,47 @@ void MainWindow::onOkButtonClicked() {
     layout->addLayout(buttonLayout);
 
 
-    connect(yesButton, &QPushButton::clicked, this, &MainWindow::printInputsAndQuit);
+    connect(yesButton, &QPushButton::clicked, this, &MainWindow::printInputs);
     connect(yesButton, &QPushButton::clicked, dialog, &QDialog::close);
     connect(noButton, &QPushButton::clicked, dialog, &QDialog::reject);
 
     dialog->exec();
 }
 
-void MainWindow::showLoadingAnimation() {
+void MainWindow::updateTextEdit() {
+    std::string coutString = m_coutStream.str();
+    m_coutStream.str(std::string());
+    // Näitab couti teksti QTextEditis juhul kui sinna on tulnud midagi
+    if (!coutString.empty()) {
+        textEdit->append(QString::fromStdString(coutString));
+    }
+}
 
+void MainWindow::showLoadingAnimation() {
+    // Peidab eelmised elemendid
     inputFileButton->hide();
     outputFileNameEdit->hide();
     outputDirButton->hide();
     floatInput1->hide();
     floatInput2->hide();
     verifyButton->hide();
-    QList<QByteArray> supportedFormats = QImageReader::supportedImageFormats();
-    QLibrary lib("qgif");
+
+    loadingTextLabel = new QLabel("Loading...", this);
 
 
+    // Teeb fonti suuremaks
+    QFont font = loadingTextLabel->font();
+    font.setPointSize(24);
+    loadingTextLabel->setFont(font);
+
+
+    // Teeb QLabeli gifi jaoks
     loadingLabel = new QLabel(this);
-    loadingLabel->setFixedSize(400, 400); // Muutan gifi suurust
+    loadingLabel->setFixedSize(50, 50); // Adjust the size as needed
     loadingLabel->setScaledContents(true);
     loadingMovie = new QMovie(":/images/duck_loading.gif");
 
+    // Kontroll kas gifi laadimine õnnestus
     if (!loadingMovie->isValid()) {
         qWarning() << loadingMovie->lastErrorString();
         qWarning("Failed to load GIF!");
@@ -218,8 +257,31 @@ void MainWindow::showLoadingAnimation() {
     loadingLabel->setMovie(loadingMovie);
     loadingMovie->start();
 
-    // Add the QLabel to the layout of the central widget
-    centralWidget()->layout()->addWidget(loadingLabel);
+    // Teeb suure layouti kõige jaoks
+    QHBoxLayout *loadingLayout = new QHBoxLayout;
+    loadingLayout->addWidget(loadingTextLabel);
+    loadingLayout->addWidget(loadingLabel);
+    loadingLayout->setAlignment(Qt::AlignLeft);
+
+    // Paigutab layouti
+    QVBoxLayout *mainLayout = qobject_cast<QVBoxLayout*>(centralWidget()->layout());
+    if (mainLayout) {
+        mainLayout->addLayout(loadingLayout);
+
+        textEdit = new QTextEdit(this);
+        textEdit->setReadOnly(true); //
+        textEdit->setFixedHeight(350); //
+        mainLayout->addWidget(textEdit);
+    } else {
+        qWarning("Failed to cast layout to QVBoxLayout!");
+    }
+    // vajalik et couti teksti näidata
+    std::cout.rdbuf(m_coutStream.rdbuf());
+
+    // Ühendab QTimeri updateTextEdit slotiga
+    QTimer *timer = new QTimer(this);
+    connect(timer, &QTimer::timeout, this, &MainWindow::updateTextEdit);
+    timer->start(100);
 
 }
 
@@ -245,6 +307,39 @@ void MainWindow::isNotFine(){
 
     connect(okButton, &QPushButton::clicked, dialog, &QDialog::close);
 
-
     dialog->exec();
+}
+
+void MainWindow::resetProgram() {
+    // tühjendab kõik väljad ja
+    inputFilePathEdit->clear();
+    outputFileNameEdit->clear();
+    outputDirPathEdit->clear();
+    floatInput1->clear();
+    floatInput2->clear();
+
+
+
+    // näitab uuesti kõiki elemente
+    inputFileButton->show();
+    outputFileNameEdit->show();
+    outputDirButton->show();
+    floatInput1->show();
+    floatInput2->show();
+    verifyButton->show();
+
+
+    textEdit->hide();
+    textEdit->clear();
+
+    loadingTextLabel->hide();
+
+    if (resetDialog) {
+        resetDialog->close();
+    }
+
+    // aken algsesse suurusesse
+    this->resize(400, 400);
+    resize(400, 400);
+
 }

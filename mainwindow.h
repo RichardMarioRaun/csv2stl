@@ -2,8 +2,8 @@
 // Created by Ricky on 15/05/2024.
 //
 
-#ifndef YEPPIE_MAINWINDOW_H
-#define YEPPIE_MAINWINDOW_H
+#ifndef CSV2STL_MAINWINDOW_H
+#define CSV2STL_MAINWINDOW_H
 
 
 #include <QMainWindow>
@@ -115,4 +115,4 @@ private:
 
 };
 
-#endif //YEPPIE_MAINWINDOW_H
+#endif //CSV2STL_MAINWINDOW_H

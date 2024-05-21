@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.27)
 
-project(yeppie)
+project(csv2stl)
 
-find_package(Qt6 COMPONENTS Core REQUIRED)
 
 set(CMAKE_PREFIX_PATH "C:\\Qt\\6.7.0\\mingw_64")
 
+find_package(Qt6 COMPONENTS Core REQUIRED)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_AUTOMOC ON)
@@ -43,15 +43,15 @@ target_link_libraries(${PROJECT_NAME}
         Qt::MultimediaWidgets
 )
 
-set_target_properties(yeppie PROPERTIES
+set_target_properties(csv2stl PROPERTIES
         RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/plugins/imageformats"
 )
 
 # Copy the necessary plugins to the output directory
-add_custom_command(TARGET yeppie POST_BUILD
+add_custom_command(TARGET csv2stl POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_directory
         "${CMAKE_PREFIX_PATH}/plugins/imageformats"
-        "$<TARGET_FILE_DIR:yeppie>/plugins/imageformats"
+        "$<TARGET_FILE_DIR:csv2stl>/plugins/imageformats"
 )
 
 
