@@ -15,6 +15,7 @@
 #include <iostream>
 #include <QDialog>
 #include <QTextEdit>
+#include <sstream>
 
 class MainWindow : public QMainWindow
 {
@@ -27,8 +28,10 @@ public slots:
     void pickInputFile();
     void pickOutputDirectory();
     void onOkButtonClicked();
-    void printInputsAndQuit();
+    void printInputs();
     void showLoadingAnimation();
+    void updateTextEdit();
+    void resetProgram();
 
     std::string getInputFilePath(){
         return inputFilePathEdit->text().toStdString();
@@ -52,6 +55,17 @@ public slots:
     void setFloatInput2(const std::string &text){
         floatInput2->setText(QString::fromStdString(text));
     };
+
+    void setInputFilePath(const std::string &text){
+        inputFilePathEdit->setText(QString::fromStdString(text));
+    };
+    void setOutputFileName(const std::string &text){
+        outputFileNameEdit->setText(QString::fromStdString(text));
+    };
+    void setOutputDirPath(const std::string &text){
+        outputDirPathEdit->setText(QString::fromStdString(text));
+    };
+
 
     void runMainPort();
 
@@ -90,9 +104,13 @@ private:
 
     QLabel *loadingLabel;
     QMovie *loadingMovie;
-    QDialog *loadingDialog;
+    QLabel *loadingTextLabel;
+    QHBoxLayout *loadingLayout;
+    QVBoxLayout *mainLayout;
+    QDialog *resetDialog;
 
     QTextEdit *textEdit;
+    std::ostringstream m_coutStream;
 
 
 };
