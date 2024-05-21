@@ -435,7 +435,7 @@ public:
         zdown = ex - (zalfa * (dx / sqrt(znum)));
         zup = ex + (zalfa * (dx / sqrt(znum)));
 
-        std::cout << "andmed loetud failist " << gettime();
+        std::cout << "andmed edukalt failist loetud (1/8) " << gettime();
         //mainWindow.setInfoAboutProgram("andmed edukalt failist loetud(1/9)");
 
         // kontrollime kas punkti vaartus on usutav ja kui ei ole siis eemdaldame andmestikust. zalfa vaartust voib muuta vajadusel
@@ -444,26 +444,26 @@ public:
         }
 
         data.clear();
-        std::cout << "andmed normaliseeritud ja sorteeritud " << gettime();
+        std::cout << "andmed normaliseeritud ja sorteeritud (2/8) " << gettime();
 
         // valmistame kolmnurgad saadud dataga
         syndata(0, XYvotmedTihe.size()-1);
 
-        std::cout << "andmed synteesitud " << gettime();
+        std::cout << "andmed sünteesitud (3/8) " << gettime();
 
         //leiame koik syndotid mis jaid genereerimata sest datat pole voi on muu viga arvutustega
         findbadDTS();
-        std::cout << "baddots leitud " << gettime();
+        std::cout << "baddots leitud (4/8) " << gettime();
         //for loop mida saaab paraleliseerida kus bruteforcitakse koik punktid
         forcedotseq(0, baddots.size());
-        std::cout << "baddots parandatud " << gettime();
+        std::cout << "baddots parandatud (5/8) " << gettime();
         baddots.clear();
         syndotsTihe.clear();
-        std::cout << "cleanup tehtud " << gettime();
+        std::cout << "cleanup tehtud (6/8) " << gettime();
         genereeriTRI(0, XYvotmedTihe.size()-1);
-        std::cout << "genereeriti mesh " << gettime();
+        std::cout << "mesh genereeritud (7/8) " << gettime();
         genereeriservad(botThic);
-        std::cout << "genereriti pohi " << gettime();
+        std::cout << "põhi genereeritud (8/8) " << gettime();
         stldat.binwriteout(outputFileName,outputFilePath );
     }
 };
@@ -472,7 +472,7 @@ public:
 
 void mainPort( const std::string& inputFilePath, const std::string& outputFileName ,const std::string& outputFilePath , float ruudusuurus, float botThic){
 
-    std::cout << "Alustame tood " << gettime();
+    std::cout << "Alustame tööd " << gettime();
     try {
         Mesh m1( inputFilePath, outputFileName,outputFilePath, ruudusuurus,botThic);
 
@@ -481,7 +481,7 @@ void mainPort( const std::string& inputFilePath, const std::string& outputFileNa
         std::cerr << "Error: " << e.what() << std::endl;
         return;
     }
-    std::cout << "lopetas too " << gettime() << "\n";
+    std::cout << "Programm lõpetas töö " << gettime() << "\n";
     return;
 }
 
