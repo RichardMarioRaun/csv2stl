@@ -220,37 +220,7 @@ void MainWindow::showLoadingAnimation() {
 
     // Add the QLabel to the layout of the central widget
     centralWidget()->layout()->addWidget(loadingLabel);
-/**
-    QDialog *dialog = new QDialog(this);
-    dialog->setFixedSize(512, 512);
 
-    QVBoxLayout *layout = new QVBoxLayout(dialog);
-    QList<QByteArray> supportedFormats = QImageReader::supportedImageFormats();
-    QLibrary lib("qgif");
-    if (!lib.load()) {
-        qWarning() << "Failed to load GIF plugin!" << lib.errorString();
-    }
-
-    loadingLabel = new QLabel(dialog);
-    loadingMovie = new QMovie(":/images/duck_loading.gif");
-
-
-
-
-    if (!loadingMovie->isValid()) {
-        qWarning() << loadingMovie->lastErrorString();
-        qWarning("Failed to load GIF!");
-
-    }
-
-    loadingLabel->setMovie(loadingMovie);
-    loadingMovie->start();
-
-    layout->addWidget(loadingLabel);
-    dialog->setLayout(layout);
-
-    dialog->show(); // Use QDialog::show() instead of QDialog::exec()
-**/
 }
 
 void MainWindow::isNotFine(){
